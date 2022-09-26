@@ -9,6 +9,8 @@ unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+OH_MY_POSH_THEME=mztheme01
+
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
 
@@ -63,3 +65,6 @@ export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # Allow Composer to use almost as much RAM as Chrome.
 export COMPOSER_MEMORY_LIMIT=-1
+
+# Apply oh-my-posh theme:
+eval "$(oh-my-posh --init --shell zsh --config $(brew --prefix oh-my-posh)/themes/$OH_MY_POSH_THEME.omp.json)"
