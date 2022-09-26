@@ -76,6 +76,12 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
 defaults write NSGlobalDomain ContextMenuGesture -int 1
 
+# Enable touch-click:
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+
+# Enable natural scroll:
+defaults write com.apple.swipescrolldirection -int 0
+
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -86,6 +92,9 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Enable permanent functions keys:
+defaults write com.apple.keyboard.fnState -int 1
 
 ###############################################################################
 # Screen                                                                      #
@@ -168,6 +177,9 @@ chflags nohidden ~/Library
 
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 40
+
+# Set magnification dock size:
+defaults write com.apple.dock largesize -int 64
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.15
