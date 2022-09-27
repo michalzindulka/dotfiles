@@ -8,8 +8,10 @@
 unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
+export ZSH="$HOME/.oh-my-zsh"
 
 OH_MY_POSH_THEME=mztheme01
+# ZSH_THEME="robbyrussell"
 
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
@@ -18,7 +20,7 @@ unsetopt nomatch
 export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'"$ "
 
 # Enable plugins.
-plugins=(git brew history kubectl history-substring-search)
+plugins=(git brew history kubectl history-substring-search zsh-autosuggestions)
 
 # Custom $PATH with extra locations.
 export PATH=$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
@@ -66,5 +68,6 @@ export HOMEBREW_AUTO_UPDATE_SECS=604800
 # Allow Composer to use almost as much RAM as Chrome.
 export COMPOSER_MEMORY_LIMIT=-1
 
+source $ZSH/oh-my-zsh.sh
 # Apply oh-my-posh theme:
 eval "$(oh-my-posh --init --shell zsh --config $(brew --prefix oh-my-posh)/themes/$OH_MY_POSH_THEME.omp.json)"
