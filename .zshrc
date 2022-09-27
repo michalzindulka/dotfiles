@@ -27,15 +27,15 @@ export PATH=$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:/usr/local/bin:/usr/l
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
 # Include alias file (if present) containing aliases for ssh, etc.
-if [ -f ~/.my-aliases.sh ]
+if [ -f ~/.aliases ]
 then
-  source ~/.my-aliases.sh
+  source ~/.aliases
 fi
 
 # Include function file (if present):
-if [ -f ~/.my-functions.sh ]
+if [ -f ~/.functions ]
 then
-  source ~/.my-functions.sh
+  source ~/.functions
 fi
 
 
