@@ -74,6 +74,9 @@ export HOMEBREW_AUTO_UPDATE_SECS=604800
 # Allow Composer to use almost as much RAM as Chrome.
 export COMPOSER_MEMORY_LIMIT=-1
 
+# Disable window title:
+DISABLE_AUTO_TITLE="true"
+
 source $ZSH/oh-my-zsh.sh
 # Apply oh-my-posh theme:
 eval "$(oh-my-posh --init --shell zsh --config $(brew --prefix oh-my-posh)/themes/$OH_MY_POSH_THEME.omp.json)"
